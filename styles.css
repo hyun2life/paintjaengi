@@ -222,6 +222,12 @@ body::after {
   background: linear-gradient(135deg, #ffcfab 0%, #f36c21 100%);
 }
 
+.btn-instagram {
+  color: #ffffff;
+  background: linear-gradient(135deg, #405de6 0%, #c13584 52%, #fd1d1d 100%);
+  box-shadow: 0 14px 28px rgba(193, 53, 132, 0.22);
+}
+
 .hero-points {
   display: flex;
   flex-wrap: wrap;
