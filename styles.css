@@ -151,13 +151,25 @@ body::after {
 }
 
 .hero h1 {
-  max-width: 11ch;
+  max-width: 9.5em;
   font-size: clamp(3.2rem, 7vw, 6.1rem);
+  line-height: 0.94;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .hero h1 span {
   display: block;
+}
+
+.headline-top {
+  max-width: 5.5em;
+}
+
+.headline-accent {
   color: var(--accent);
+  max-width: 5.8em;
+  margin-top: 0.14em;
 }
 
 .hero-text,
@@ -691,7 +703,12 @@ body::after {
   .hero h1 {
     max-width: none;
     font-size: clamp(2.7rem, 14vw, 4.4rem);
-    line-height: 0.95;
+    line-height: 0.97;
+  }
+
+  .headline-top,
+  .headline-accent {
+    max-width: none;
   }
 
   .hero-text {
