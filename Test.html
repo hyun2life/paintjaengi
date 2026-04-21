@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="light" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>페인트쟁이 | 공간의 첫인상을 바꾸는 페인트 시공</title>
+  <meta
+    content="페인트쟁이는 주거, 상업, 사무 공간을 위한 페인트 시공 브랜드입니다. 깔끔한 보양과 정돈된 마감으로 공간의 분위기를 다시 디자인합니다."
+    name="description"
+  >
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#f7f5f0",
+            surface: "#fbfaf7",
+            ink: "#131313",
+            muted: "#5d6066",
+            line: "#dde3e8",
+            primary: "#13254d",
+            "primary-soft": "#edf2fa",
+            accent: "#f36c21",
+            "accent-soft": "#ffe1cf",
+            cream: "#f3ede2"
+          },
+          fontFamily: {
+            sans: ["Manrope", "Noto Sans KR", "sans-serif"]
+          },
+          boxShadow: {
+            card: "0 10px 30px rgba(19,37,77,0.06)",
+            glow: "0 16px 48px rgba(243,108,33,0.18)"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: "Manrope", "Noto Sans KR", sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-ink selection:bg-primary selection:text-white">
+  <header class="fixed top-0 z-50 w-full border-b border-line/80 bg-white/95 backdrop-blur-sm shadow-[0px_4px_20px_rgba(19,37,77,0.05)]">
+    <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 md:px-12">
+      <a class="flex flex-col leading-none" href="#top">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">Interior Boy</span>
+        <strong class="mt-2 text-2xl font-black tracking-tight text-primary">페인트쟁이</strong>
+      </a>
+      <nav class="hidden items-center space-x-8 md:flex">
+        <a class="border-b-2 border-primary pb-1 text-[14px] font-bold text-primary" href="#services">시공영역</a>
+        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#portfolio">포트폴리오</a>
+        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#process">진행방식</a>
+        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#about">소개</a>
+        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#contact">문의</a>
+      </nav>
+      <div class="hidden md:block">
+        <a class="rounded-lg bg-primary px-6 py-3 text-[14px] font-bold text-white transition-opacity hover:opacity-90" href="https://www.instagram.com/paint_jaeng_i/" rel="noreferrer" target="_blank">
+          인스타그램
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20" id="top">
+    <section class="relative flex min-h-[860px] items-center overflow-hidden bg-primary text-white">
+      <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,rgba(243,108,33,0.45),transparent_28%),linear-gradient(135deg,rgba(19,37,77,1)_0%,rgba(17,17,17,0.92)_100%)]"></div>
+      <div class="absolute inset-y-0 right-[-120px] hidden w-[520px] rounded-full border border-white/10 lg:block"></div>
+      <div class="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-16 px-8 lg:grid-cols-[minmax(0,1.2fr)_460px]">
+        <div class="max-w-3xl">
+          <span class="mb-6 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white/90">Premium Painting Solutions</span>
+          <h1 class="mb-6 text-5xl font-extrabold leading-[1.08] tracking-[-0.03em] text-white md:text-7xl">
+            칠하는 일을 넘어
+            <span class="block text-accent">공간의 인상을 디자인합니다</span>
+          </h1>
+          <p class="mb-10 max-w-2xl text-lg leading-8 text-slate-300">
+            페인트쟁이는 주거, 상업, 사무 공간의 분위기를 다시 설계하는 시공 브랜드입니다.
+            눈에 먼저 들어오는 톤, 깔끔한 보양, 정돈된 마감까지 한 흐름으로 관리합니다.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a class="flex items-center gap-2 rounded-lg bg-white px-8 py-4 text-[14px] font-bold text-primary transition-all hover:bg-slate-100" href="#contact">
+              상담 문의하기
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+            <a class="rounded-lg border border-white/30 bg-white/5 px-8 py-4 text-[14px] font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10" href="#portfolio">
+              시공 사례 보기
+            </a>
+            <a class="rounded-lg border border-fuchsia-300/30 bg-[linear-gradient(135deg,#405de6_0%,#c13584_55%,#fd1d1d_100%)] px-8 py-4 text-[14px] font-bold text-white shadow-glow transition-all hover:opacity-95" href="https://www.instagram.com/paint_jaeng_i/" rel="noreferrer" target="_blank">
+              인스타그램 바로가기
+            </a>
+          </div>
+          <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div class="rounded-xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
+              <div class="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-white/60">Finish</div>
+              <p class="text-sm leading-6 text-white/85">깔끔한 보양과 마감 중심</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
+              <div class="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-white/60">Coverage</div>
+              <p class="text-sm leading-6 text-white/85">주거·상가·사무공간 대응</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
+              <div class="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-white/60">Scope</div>
+              <p class="text-sm leading-6 text-white/85">부분 보수부터 전체 시공까지</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-[28px] border border-white/10 bg-white/10 p-6 backdrop-blur-sm shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
+            <div class="mb-4 inline-flex rounded-full bg-[#101214] px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white">Signature CI</div>
+            <div class="overflow-hidden rounded-[24px] bg-white p-4">
+              <img alt="페인트쟁이 CI" class="w-full rounded-[20px] object-cover" src="CI.jpg">
+            </div>
+          </div>
+          <div class="absolute -bottom-10 left-8 max-w-sm rounded-[24px] bg-white p-6 text-primary shadow-card">
+            <p class="text-base leading-7 text-muted">굵은 라인, 도구의 직관성, 단번에 읽히는 이름.</p>
+            <strong class="mt-3 block text-2xl font-bold leading-9 text-primary">브랜드의 첫 인상부터 시공 감도까지 이어집니다.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-surface py-20" id="about">
+      <div class="mx-auto max-w-7xl px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-4xl font-bold tracking-[-0.02em] text-primary">우리의 시공 기준</h2>
+          <p class="mx-auto max-w-2xl text-base leading-7 text-muted">단순히 칠하는 데서 끝나지 않고, 현장 정리부터 결과 이후의 분위기까지 함께 생각합니다.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
+          <article class="rounded-2xl border border-line bg-white p-8 shadow-card transition-all hover:border-primary/20">
+            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-soft text-primary">
+              <span class="material-symbols-outlined">architecture</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-primary">현장 이해</h3>
+            <p class="text-base leading-7 text-muted">주거와 상업 공간의 동선을 고려해 필요한 구간부터 정리합니다.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-8 shadow-card transition-all hover:border-primary/20">
+            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-soft text-primary">
+              <span class="material-symbols-outlined">palette</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-primary">톤 제안</h3>
+            <p class="text-base leading-7 text-muted">과하지 않고 오래 만족할 수 있는 색감 밸런스를 함께 제안합니다.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-8 shadow-card transition-all hover:border-primary/20">
+            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-soft text-primary">
+              <span class="material-symbols-outlined">format_paint</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-primary">깔끔한 마감</h3>
+            <p class="text-base leading-7 text-muted">보양, 디테일 라인, 최종 정리까지 결과의 신뢰도를 높입니다.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-8 shadow-card transition-all hover:border-primary/20">
+            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-soft text-primary">
+              <span class="material-symbols-outlined">verified_user</span>
+            </div>
+            <h3 class="mb-3 text-2xl font-bold text-primary">사후 대응</h3>
+            <p class="text-base leading-7 text-muted">시공 이후에도 관리 포인트를 안내해 오래 유지되도록 돕습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20" id="services">
+      <div class="mx-auto max-w-7xl px-8">
+        <div class="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <h2 class="mb-4 text-4xl font-bold tracking-[-0.02em] text-primary">핵심 시공 영역</h2>
+            <p class="text-base leading-7 text-muted">공간 성격과 사용 목적에 따라 다른 시공 포인트를 적용합니다.</p>
+          </div>
+          <a class="flex items-center gap-2 text-[14px] font-bold text-primary transition-transform hover:translate-x-1" href="#contact">
+            상담 연결하기 <span class="material-symbols-outlined">chevron_right</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-primary">
+            <div class="absolute inset-0 bg-[linear-gradient(160deg,#1f325f_0%,#13254d_55%,#0f1012_100%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(243,108,33,0.22),transparent_38%)]"></div>
+            <div class="absolute bottom-0 left-0 p-8">
+              <div class="mb-3 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Residential</div>
+              <h3 class="mb-2 text-3xl font-bold text-white">주거 공간</h3>
+              <p class="text-sm leading-6 text-slate-300">아파트, 빌라, 방 한 칸 리프레시부터 전체 분위기 변경까지.</p>
+            </div>
+          </article>
+          <article class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-primary">
+            <div class="absolute inset-0 bg-[linear-gradient(160deg,#172952_0%,#13254d_55%,#0f1012_100%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_28%)]"></div>
+            <div class="absolute bottom-0 left-0 p-8">
+              <div class="mb-3 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Commercial</div>
+              <h3 class="mb-2 text-3xl font-bold text-white">상업 공간</h3>
+              <p class="text-sm leading-6 text-slate-300">매장, 카페, 쇼룸처럼 브랜드 인상이 중요한 공간 시공.</p>
+            </div>
+          </article>
+          <article class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-primary">
+            <div class="absolute inset-0 bg-[linear-gradient(160deg,#162446_0%,#101f40_55%,#0d0f13_100%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(243,108,33,0.18),transparent_35%)]"></div>
+            <div class="absolute bottom-0 left-0 p-8">
+              <div class="mb-3 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Office</div>
+              <h3 class="mb-2 text-3xl font-bold text-white">사무 공간</h3>
+              <p class="text-sm leading-6 text-slate-300">복도, 회의실, 입구처럼 첫 인상이 남는 구간 중심 개선.</p>
+            </div>
+          </article>
+          <article class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-primary">
+            <div class="absolute inset-0 bg-[linear-gradient(160deg,#1d2432_0%,#13254d_52%,#0f1012_100%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(243,108,33,0.22),transparent_34%)]"></div>
+            <div class="absolute bottom-0 left-0 p-8">
+              <div class="mb-3 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Repair</div>
+              <h3 class="mb-2 text-3xl font-bold text-white">부분 보수</h3>
+              <p class="text-sm leading-6 text-slate-300">찍힘, 오염, 벗겨짐 같은 눈에 거슬리는 구간 빠른 보완.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-20" id="portfolio">
+      <div class="mx-auto max-w-7xl px-8">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-4xl font-bold tracking-[-0.02em] text-primary">시공 사례 구성</h2>
+          <p class="mx-auto max-w-2xl text-base leading-7 text-muted">실제 사진을 더해가며 확장하기 좋은 포트폴리오 구조로 정리했습니다.</p>
+        </div>
+        <div class="grid h-auto grid-cols-1 gap-6 md:h-[620px] md:grid-cols-12 md:grid-rows-2">
+          <article class="relative overflow-hidden rounded-2xl bg-primary md:col-span-7 md:row-span-2">
+            <div class="absolute inset-0 bg-[linear-gradient(145deg,#13254d_0%,#1d2440_55%,#0d0f12_100%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(243,108,33,0.25),transparent_34%)]"></div>
+            <div class="relative flex h-full flex-col justify-end p-10">
+              <span class="mb-3 inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">주거 리프레시</span>
+              <h3 class="mb-3 text-4xl font-bold text-white">노란 기가 돌던 벽면을 밝고 정돈된 톤으로 재정리</h3>
+              <p class="max-w-2xl text-base leading-7 text-slate-300">거실과 복도 중심 재도장, 몰딩 주변 보양, 생활 동선을 고려한 순차 작업으로 집 전체 인상을 안정적으로 바꾸는 사례 구조입니다.</p>
+            </div>
+          </article>
+          <article class="relative overflow-hidden rounded-2xl bg-white shadow-card md:col-span-5 md:row-span-1">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(19,37,77,0.08),transparent_35%)]"></div>
+            <div class="relative flex h-full flex-col justify-end p-8">
+              <span class="mb-3 inline-block rounded-full bg-primary-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">상업 공간</span>
+              <h4 class="text-2xl font-bold text-primary">브랜드 무드와 어울리는 벽면 톤 정리</h4>
+              <p class="mt-3 text-sm leading-6 text-muted">매장, 카페, 쇼룸에서 사진 배경이 되는 벽면과 포인트 면을 나눠 시공하는 사례.</p>
+            </div>
+          </article>
+          <article class="relative overflow-hidden rounded-2xl bg-white shadow-card md:col-span-5 md:row-span-1">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(243,108,33,0.12),transparent_38%)]"></div>
+            <div class="relative flex h-full flex-col justify-end p-8">
+              <span class="mb-3 inline-block rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent">사무 공간</span>
+              <h4 class="text-2xl font-bold text-primary">출입구와 회의실을 중심으로 첫인상 리셋</h4>
+              <p class="mt-3 text-sm leading-6 text-muted">전체 리뉴얼 없이도 분위기 체감이 큰 구간을 우선 정리하는 구성입니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20" id="process">
+      <div class="mx-auto max-w-7xl px-8">
+        <h2 class="mb-16 text-center text-4xl font-bold tracking-[-0.02em] text-primary">진행 방식</h2>
+        <div class="relative">
+          <div class="absolute left-0 top-12 hidden h-px w-full bg-line lg:block"></div>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
+            <article class="relative z-10 flex flex-col items-center text-center">
+              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-line bg-white text-primary shadow-sm">
+                <span class="material-symbols-outlined text-4xl">chat</span>
+              </div>
+              <span class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-muted">STEP 01</span>
+              <h3 class="mb-3 text-2xl font-bold text-primary">상담</h3>
+              <p class="text-sm leading-6 text-muted">공간 용도와 원하는 분위기, 범위를 먼저 확인합니다.</p>
+            </article>
+            <article class="relative z-10 flex flex-col items-center text-center">
+              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-line bg-white text-primary shadow-sm">
+                <span class="material-symbols-outlined text-4xl">analytics</span>
+              </div>
+              <span class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-muted">STEP 02</span>
+              <h3 class="mb-3 text-2xl font-bold text-primary">현장 체크</h3>
+              <p class="text-sm leading-6 text-muted">면 상태와 보수 필요 여부, 작업 동선을 정리합니다.</p>
+            </article>
+            <article class="relative z-10 flex flex-col items-center text-center">
+              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-primary bg-white text-primary shadow-sm">
+                <span class="material-symbols-outlined text-4xl">assignment</span>
+              </div>
+              <span class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-primary">STEP 03</span>
+              <h3 class="mb-3 text-2xl font-bold text-primary">제안</h3>
+              <p class="text-sm leading-6 text-muted">색상, 자재, 범위, 일정 방향을 구체적으로 제안합니다.</p>
+            </article>
+            <article class="relative z-10 flex flex-col items-center text-center">
+              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-line bg-white text-primary shadow-sm">
+                <span class="material-symbols-outlined text-4xl">format_paint</span>
+              </div>
+              <span class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-muted">STEP 04</span>
+              <h3 class="mb-3 text-2xl font-bold text-primary">시공</h3>
+              <p class="text-sm leading-6 text-muted">보양부터 마감까지 정돈감을 잃지 않도록 작업합니다.</p>
+            </article>
+            <article class="relative z-10 flex flex-col items-center text-center">
+              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-line bg-white text-primary shadow-sm">
+                <span class="material-symbols-outlined text-4xl">check_circle</span>
+              </div>
+              <span class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-muted">STEP 05</span>
+              <h3 class="mb-3 text-2xl font-bold text-primary">마무리</h3>
+              <p class="text-sm leading-6 text-muted">현장 정리와 최종 확인까지 깔끔하게 마감합니다.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary text-white" id="contact">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-8 py-20 lg:grid-cols-2">
+        <div>
+          <h2 class="mb-6 text-5xl font-extrabold tracking-[-0.03em] text-white">프로젝트 상담 시작하기</h2>
+          <p class="mb-12 max-w-xl text-lg leading-8 text-slate-300">아래 운영 정보는 나중에 실제 정보로 교체하면 바로 실전 홍보 페이지로 사용할 수 있습니다. 현재는 인스타그램 문의 동선을 함께 연결해두었습니다.</p>
+          <div class="space-y-8">
+            <div class="flex items-start gap-6">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                <span class="material-symbols-outlined text-white">phone_in_talk</span>
+              </div>
+              <div>
+                <h5 class="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-slate-400">전화 문의</h5>
+                <p class="text-2xl font-bold">[전화번호 입력]</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                <span class="material-symbols-outlined text-white">mail</span>
+              </div>
+              <div>
+                <h5 class="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-slate-400">이메일 문의</h5>
+                <p class="text-2xl font-bold">[이메일 주소 입력]</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-6">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                <span class="material-symbols-outlined text-white">alternate_email</span>
+              </div>
+              <div>
+                <h5 class="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-slate-400">인스타그램</h5>
+                <p class="text-2xl font-bold">@paint_jaeng_i</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-[24px] bg-white p-10 text-primary shadow-card">
+          <div class="space-y-6">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div class="space-y-2">
+                <label class="block text-xs font-bold uppercase tracking-[0.18em] text-primary">이름</label>
+                <input class="w-full rounded-lg border-line bg-slate-50 p-3 text-primary focus:border-primary focus:ring-primary" placeholder="성함" type="text">
+              </div>
+              <div class="space-y-2">
+                <label class="block text-xs font-bold uppercase tracking-[0.18em] text-primary">연락처</label>
+                <input class="w-full rounded-lg border-line bg-slate-50 p-3 text-primary focus:border-primary focus:ring-primary" placeholder="010-0000-0000" type="tel">
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-xs font-bold uppercase tracking-[0.18em] text-primary">공간 유형</label>
+              <select class="w-full rounded-lg border-line bg-slate-50 p-3 text-primary focus:border-primary focus:ring-primary">
+                <option>주거 공간</option>
+                <option>상업 공간</option>
+                <option>사무 공간</option>
+                <option>부분 보수</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-xs font-bold uppercase tracking-[0.18em] text-primary">프로젝트 설명</label>
+              <textarea class="w-full rounded-lg border-line bg-slate-50 p-3 text-primary focus:border-primary focus:ring-primary" placeholder="공간 상태와 원하는 분위기를 적어주세요." rows="4"></textarea>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <a class="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-4 text-[14px] font-bold text-white transition-all hover:bg-black" href="mailto:example@paintjangi.kr">이메일 상담 연결</a>
+              <a class="flex w-full items-center justify-center rounded-lg bg-[linear-gradient(135deg,#405de6_0%,#c13584_55%,#fd1d1d_100%)] px-6 py-4 text-[14px] font-bold text-white transition-all hover:opacity-95" href="https://www.instagram.com/paint_jaeng_i/" rel="noreferrer" target="_blank">인스타 DM 문의</a>
+            </div>
+            <p class="text-center text-xs leading-6 text-muted">실제 접수 폼으로 바꾸기 전까지는 안내용 문의 영역으로 사용할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full border-t border-white/10 bg-[#13254D] text-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-12 md:grid-cols-4">
+      <div>
+        <span class="mb-4 block text-xl font-bold text-white">페인트쟁이</span>
+        <p class="text-sm leading-7 text-slate-300">공간의 첫인상을 다시 설계하는 페인트 시공 브랜드. 깔끔한 마감과 정돈된 현장 운영을 기준으로 움직입니다.</p>
+      </div>
+      <div>
+        <h6 class="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-white">시공 영역</h6>
+        <ul class="space-y-4 text-sm text-slate-300">
+          <li><a class="transition-colors hover:text-white" href="#services">주거 공간</a></li>
+          <li><a class="transition-colors hover:text-white" href="#services">상업 공간</a></li>
+          <li><a class="transition-colors hover:text-white" href="#services">사무 공간</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-white">바로가기</h6>
+        <ul class="space-y-4 text-sm text-slate-300">
+          <li><a class="transition-colors hover:text-white" href="#portfolio">포트폴리오</a></li>
+          <li><a class="transition-colors hover:text-white" href="#process">진행 방식</a></li>
+          <li><a class="transition-colors hover:text-white" href="#contact">문의</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-white">Social</h6>
+        <a class="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-bold text-primary transition-opacity hover:opacity-90" href="https://www.instagram.com/paint_jaeng_i/" rel="noreferrer" target="_blank">
+          <span class="material-symbols-outlined">photo_camera</span>
+          @paint_jaeng_i
+        </a>
+      </div>
+    </div>
+    <div class="mx-auto max-w-7xl border-t border-white/10 px-8 py-8">
+      <p class="text-center text-sm text-slate-400">© 2026 페인트쟁이. 공간의 첫인상을 바꾸는 페인트 시공.</p>
+    </div>
+  </footer>
+</body>
+</html>
