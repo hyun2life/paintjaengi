@@ -43,6 +43,10 @@
     body { font-family: "Manrope", "Noto Sans KR", sans-serif; }
     .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24; }
     .font-display { font-family: "Bebas Neue", "Manrope", sans-serif; letter-spacing: 0.02em; }
+    .nav-link-active {
+      color: #13254d !important;
+      border-bottom-color: #13254d !important;
+    }
 
     /* ── 롤러 인트로 ── */
     #roller-intro {
@@ -168,12 +172,12 @@
         <strong class="mt-1 font-display text-3xl tracking-wide text-primary">페인트쟁이</strong>
       </a>
       <nav class="hidden items-center space-x-8 md:flex">
-        <a class="border-b-2 border-primary pb-1 text-[14px] font-bold text-primary" href="#services">시공영역</a>
-        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#palette">컬러전문성</a>
-        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#portfolio">포트폴리오</a>
-        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#process">진행방식</a>
-        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#about">소개</a>
-        <a class="text-[14px] font-semibold text-muted transition-colors hover:text-primary" href="#contact">문의</a>
+        <a class="border-b-2 border-transparent pb-1 text-[14px] font-bold text-muted transition-colors hover:text-primary" data-nav-link href="#services">시공영역</a>
+        <a class="border-b-2 border-transparent pb-1 text-[14px] font-bold text-muted transition-colors hover:text-primary" data-nav-link href="#palette">컬러전문성</a>
+        <a class="border-b-2 border-transparent pb-1 text-[14px] font-bold text-muted transition-colors hover:text-primary" data-nav-link href="#portfolio">포트폴리오</a>
+        <a class="border-b-2 border-transparent pb-1 text-[14px] font-bold text-muted transition-colors hover:text-primary" data-nav-link href="#process">진행방식</a>
+        <a class="border-b-2 border-transparent pb-1 text-[14px] font-bold text-muted transition-colors hover:text-primary" data-nav-link href="#about">소개</a>
+        <a class="border-b-2 border-transparent pb-1 text-[14px] font-bold text-muted transition-colors hover:text-primary" data-nav-link href="#contact">문의</a>
       </nav>
       <div class="hidden md:flex items-center gap-3">
         <a class="rounded-full bg-gradient-to-r from-[#405de6] via-[#c13584] to-[#fd1d1d] px-5 py-2.5 text-[13px] font-bold text-white transition-opacity hover:opacity-90"
@@ -681,15 +685,15 @@
               <p class="text-sm leading-6 text-muted">면 상태와 보수 필요 여부, 작업 동선을 정리합니다.</p>
             </article>
             <article class="reveal-child relative z-10 flex flex-col items-center text-center group">
-              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-primary bg-primary text-white shadow-sm transition-all group-hover:shadow-drip">
-                <span class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24">assignment</span>
+              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-line bg-white text-primary shadow-sm transition-all group-hover:border-primary group-hover:shadow-drip">
+                <span class="material-symbols-outlined text-4xl">assignment</span>
               </div>
-              <span class="mb-2 font-display text-xs tracking-[0.18em] text-primary">STEP 03</span>
+              <span class="mb-2 font-display text-xs tracking-[0.18em] text-muted">STEP 03</span>
               <h3 class="mb-3 font-display text-3xl tracking-wide text-primary">제안</h3>
               <p class="text-sm leading-6 text-muted">색상, 자재, 범위, 일정 방향을 구체적으로 제안합니다.</p>
             </article>
             <article class="reveal-child relative z-10 flex flex-col items-center text-center group">
-              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-line bg-white text-primary shadow-sm transition-all group-hover:border-accent group-hover:shadow-drip">
+              <div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-line bg-white text-primary shadow-sm transition-all group-hover:border-primary group-hover:shadow-drip">
                 <span class="material-symbols-outlined text-4xl">format_paint</span>
               </div>
               <span class="mb-2 font-display text-xs tracking-[0.18em] text-muted">STEP 04</span>
@@ -892,6 +896,58 @@
       sw.addEventListener('mouseenter', () => { sw.style.transform = 'scaleY(1.2)'; });
       sw.addEventListener('mouseleave', () => { sw.style.transform = ''; });
     });
+
+    // ── 헤더 네비 active underline ──
+    const navLinks = Array.from(document.querySelectorAll('[data-nav-link]'));
+    const sectionMap = new Map(
+      navLinks
+        .map(link => {
+          const target = document.querySelector(link.getAttribute('href'));
+          return target ? [target.id, link] : null;
+        })
+        .filter(Boolean)
+    );
+
+    const setActiveNav = (activeId) => {
+      navLinks.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`;
+        link.classList.toggle('nav-link-active', isActive);
+      });
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          setActiveNav(href.slice(1));
+        }
+      });
+    });
+
+    const navObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible.length > 0) {
+        setActiveNav(visible[0].target.id);
+      }
+    }, {
+      rootMargin: '-25% 0px -55% 0px',
+      threshold: [0.2, 0.35, 0.6]
+    });
+
+    sectionMap.forEach((_, id) => {
+      const section = document.getElementById(id);
+      if (section) navObserver.observe(section);
+    });
+
+    const initialSectionId = window.location.hash
+      ? window.location.hash.slice(1)
+      : navLinks[0]?.getAttribute('href')?.slice(1);
+
+    if (initialSectionId) {
+      setActiveNav(initialSectionId);
+    }
 
     // ── 포트폴리오 모달 ──
     const portfolioModal = document.querySelector('[data-portfolio-modal]');
